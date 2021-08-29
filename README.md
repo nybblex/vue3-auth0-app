@@ -1,10 +1,11 @@
 ## Project Config
 
 Setup the following keys in your .env file with yout Auth0 configuration:
-
+```
 VUE_APP_AUTH0_CONFIG_DOMAIN
 VUE_APP_AUTH0_CONFIG_CLIENTID
 VUE_APP_DOMAINURL_REDIRECT
+```
 
 ## Project setup
 ```
