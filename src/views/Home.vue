@@ -18,27 +18,24 @@
 
 <script>
 
-import { ref, computed } from 'vue';
-import { useStore } from 'vuex';
-import { signOut } from '@/auth';
+import { ref, computed } from 'vue'
+import { useStore } from 'vuex'
+import { signOut } from '@/auth'
 
 export default {
-  name: 'Home',  
+  name: 'Home',
 
   setup() {
-    
-    const store = useStore();
-    const user2 = ref();
-    
-    let user = computed(() => store.state.user);
-    let authenticated = computed(() => store.state.auth.isAuthenticated);
+    const store = useStore()
+    const user2 = ref()
 
-    user2.value = JSON.parse(localStorage.getItem('user'));
+    const user = computed(() => store.getters['main/user'])
+    const authenticated = computed(() => store.getters['main/isAuthenticated'])
 
-    
+    user2.value = JSON.parse(localStorage.getItem('user'))
 
     async function logout() {
-      await signOut();
+      await signOut()
     }
 
     return {
@@ -47,9 +44,7 @@ export default {
       user2,
       logout
     }
-
   }
-
 }
 
 </script>

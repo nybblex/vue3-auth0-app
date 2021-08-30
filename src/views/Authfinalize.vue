@@ -1,9 +1,9 @@
 <template>
-	<h2>Finalizing Authenticatioin</h2>	
+<h2>Finalizing Authentication</h2>
 </template>
 
 <script>
 export default {
-	name: 'AuthFinalize'
+  name: 'AuthFinalize'
 }
 </script>
